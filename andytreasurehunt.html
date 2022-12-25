@@ -1,1 +1,46 @@
-<h1>Go to the toaster</h1>
+
+<html>
+    <head>
+        <script>
+        document.addEventListener("DOMContentLoaded", function() {
+
+var list = document.createElement('ul');
+var listItems = ['one', 'two', 'three'];
+
+var input = document.createElement('input');
+input.type = 'password';
+input.id = 'password';
+document.body.appendChild(input);
+
+var button = document.createElement('button');
+button.innerHTML = 'Submit';
+button.onclick = function() {
+  var password = document.getElementById('password').value;
+  if (password === 'password') {
+    var item = document.createElement('li');
+    item.innerHTML = listItems.shift();
+    list.appendChild(item);
+  }
+};
+document.body.appendChild(button);
+
+document.body.appendChild(list);
+
+var passcodes = ['password', 'password2', 'password3'];
+var index = 0;
+button.onclick = function() {
+  var password = document.getElementById('password').value;
+  if (password === passcodes[index]) {
+    var item = document.createElement('li');
+    item.innerHTML = listItems.shift();
+    list.appendChild(item);
+    index++;
+  }
+};
+});
+        </script>
+    </head>
+    <body style="margin: 0;">
+      <h1>Enter the password you get to see the next item</h1>
+    </body>
+</html>
