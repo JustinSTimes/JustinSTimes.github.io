@@ -1,0 +1,42 @@
+
+<html>
+    <head>
+        <script>
+        document.addEventListener("DOMContentLoaded", function() {
+
+var title = document.createElement('div');
+title.innerHTML = '<h1>Which game do you wish to play?</h1>';
+document.body.appendChild(title);
+title.style.fontFamily = 'sans-serif';
+title.style.fontWeight = 'bold';
+title.style.textAlign = 'center';
+
+var button1 = document.createElement('button');
+button1.innerHTML = 'Game1';
+document.body.appendChild(button1);
+button1.style.backgroundColor = 'blue';
+button1.style.border = '5px solid darkblue';
+button1.style.borderRadius = '10px';
+button1.style.padding = '10px';
+button1.style.margin = '10px';
+button1.style.color = 'white';
+button1.style.fontFamily = 'sans-serif';
+button1.style.fontWeight = 'bold';
+
+button1.onmouseover = function() {
+  button1.style.backgroundColor = 'darkblue';
+}
+button1.onmouseout = function() {
+  button1.style.backgroundColor = 'blue';
+}
+
+button1.onclick = function() {
+  window.location.href = 'https://www.google.com';
+}
+});
+        </script>
+    </head>
+    <body style="margin: 0;">
+        
+    </body>
+</html>
