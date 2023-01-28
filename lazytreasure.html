@@ -1,0 +1,50 @@
+<html>
+    <head>
+        <script>
+        document.addEventListener("DOMContentLoaded", function() {
+
+var unscrambleButton = document.createElement('button');
+unscrambleButton.innerHTML = 'Unscramble';
+document.body.appendChild(unscrambleButton);
+
+var unscrambleInput = document.createElement('input');
+unscrambleInput.setAttribute('type', 'text');
+document.body.appendChild(unscrambleInput);
+
+var unscrambleOutput = document.createElement('div');
+document.body.appendChild(unscrambleOutput);
+
+var words = ['under-toaster', 'nope!', 'bananas', 'computer-dad', 'behind-speaker-up', 'susie-bed-down', 'susie', 'bread-storing-thing', 'coffee-brewer', 'down-fridge', 'tree-up', 'microwave'];
+
+unscrambleButton.addEventListener('click', function() {
+  var input = unscrambleInput.value;
+  var output = '';
+  for (var i = 0; i < words.length; i++) {
+    if (isAnagram(input, words[i])) {
+      output += words[i] + ' ';
+    }
+  }
+  unscrambleOutput.innerHTML = output;
+});
+
+function isAnagram(word1, word2) {
+  if (word1.length != word2.length) {
+    return false;
+  }
+  var word1Array = word1.split('');
+  var word2Array = word2.split('');
+  for (var i = 0; i < word1Array.length; i++) {
+    var index = word2Array.indexOf(word1Array[i]);
+    if (index == -1) {
+      return false;
+    }
+    word2Array.splice(index, 1);
+  }
+  return true;
+} 
+});
+        </script>
+    </head>
+    <body style="margin: 0;">
+    </body>
+</html>
