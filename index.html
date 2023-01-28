@@ -33,6 +33,28 @@ button1.onmouseout = function() {
 button1.onclick = function() {
   window.location.href = 'https://justinstimes.github.io/andytreasurehunt.html';
 }
+var button2 = document.createElement('button');
+button2.innerHTML = 'Lazy Treasure Hunt';
+document.body.appendChild(button1);
+button2.style.backgroundColor = 'blue';
+button2.style.border = '5px solid darkblue';
+button2.style.borderRadius = '10px';
+button2.style.padding = '10px';
+button2.style.margin = '10px';
+button2.style.color = 'white';
+button2.style.fontFamily = 'sans-serif';
+button2.style.fontWeight = 'bold';
+
+button2.onmouseover = function() {
+  button2.style.backgroundColor = 'darkblue';
+}
+button2.onmouseout = function() {
+  button2.style.backgroundColor = 'blue';
+}
+
+button2.onclick = function() {
+  window.location.href = 'https://justinstimes.github.io/lazytreasure.html';
+}
 });
         </script>
     </head>
